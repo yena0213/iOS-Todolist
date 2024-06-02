@@ -11,10 +11,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        if #available(iOS 13.0, *) {
+                 // iOS 13 이상에서는 SceneDelegate에서 설정합니다.
+             } else {
+                 window = UIWindow(frame: UIScreen.main.bounds)
+                       let todoViewController = TodoViewController()
+                       window?.rootViewController = UINavigationController(rootViewController: todoViewController)
+                       window?.makeKeyAndVisible()
+             }
+             return true
+         
     }
 
     // MARK: UISceneSession Lifecycle
