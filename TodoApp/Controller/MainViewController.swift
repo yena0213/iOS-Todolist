@@ -115,7 +115,7 @@ class MainViewController: UIViewController {
    }
 
     @objc private func loginButtonTapped() {
-        let loginVC = LoginViewController()
+        let loginVC = SignInViewController()
         navigationController?.pushViewController(loginVC, animated: true)
     }
     

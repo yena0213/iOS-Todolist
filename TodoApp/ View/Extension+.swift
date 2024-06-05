@@ -51,7 +51,7 @@ extension UIColor {
     static let fontColor = UIColor(hexCode: "735B37")
     static let labelFontColor = UIColor(hexCode: "553910")
     static let grayBackgroud = UIColor(hexCode: "F5F5F5")
-    static let MainBackground = UIColor(hexCode:"#4260FF")
+    static let MainBackground = UIColor(hexCode:"4260FF")
     
     static let lineColor = UIColor(hexCode: "EAEAEA")
     

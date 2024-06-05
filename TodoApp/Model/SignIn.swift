@@ -20,7 +20,7 @@ struct LoginResponse: Codable {
 }
 
 // MARK: - LoginData
-struct LoginData: Codable{
+struct SignIn: Codable{
     let userId: String
     let userPw: String
 }
