@@ -4,11 +4,21 @@
 //
 //  Created by 한현승 on 5/25/24.
 //
-
 import UIKit
 import SnapKit
 
 final class TodoViewController: UIViewController {
+    
+    var memberId: Int
+    
+    init(memberId: Int){
+        self.memberId = memberId
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     var categories: [Category] = []
     var todos: [Todo] = []
@@ -78,11 +88,11 @@ final class TodoViewController: UIViewController {
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor(hexCode: "EAEAEA").cgColor
         view.layer.cornerRadius = 10
-        view.layer.shadowColor = UIColor(hexCode: "000000").cgColor
-        view.layer.masksToBounds = false
-        view.layer.shadowOffset = CGSize(width: 2, height: 4)
-        view.layer.shadowOpacity = 0.3
-        view.layer.shadowRadius = 5
+//        view.layer.shadowColor = UIColor(hexCode: "000000").cgColor
+//        view.layer.masksToBounds = false
+//        view.layer.shadowOffset = CGSize(width: 2, height: 4)
+//        view.layer.shadowOpacity = 0.3
+//        view.layer.shadowRadius = 5
         return view
     }()
     
@@ -138,7 +148,11 @@ final class TodoViewController: UIViewController {
         getCategoryTodo()
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         getCategoryTodo()
@@ -290,8 +304,7 @@ final class TodoViewController: UIViewController {
     func getCategoryTodo() {
         Task {
             do {
-                let memberId = 1
-                self.categories = try await FetchAPI.shared.getCategory(memberId: memberId)
+                self.categories = try await FetchAPI.shared.getCategory(memberId: self.memberId)
                 self.todos = try await FetchAPI.shared.getTodo(memberId: memberId)
                 self.categoryView.reloadData()
                 self.todoView.reloadData()

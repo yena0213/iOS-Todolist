@@ -168,7 +168,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     
     @objc private func loginButtonTapped() {
         guard let setUserId = idTextField.text,
-              let setUserPw = pwTextField.text else {
+                let setUserPw = pwTextField.text
+        else {
             let alert = UIAlertController(title: "Error", message: "양식을 채워주세요", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
@@ -182,11 +183,11 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 let permitLogin = try await FetchAPI.shared.signIn(data: newLogin)
                 print("Permit Login: \(permitLogin)")
                 
-                let todoVC = TodoViewController()
+                let todoVC = TodoViewController(memberId: permitLogin.memberId)
                 navigationController?.pushViewController(todoVC, animated: true)
                 
             } catch {
-                let alert = UIAlertController(title: "Error", message: "Failed to Sign-In", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Error", message: "로그인에 실패하였습니다.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 present(alert, animated: true, completion: nil)
                 print("Failed to SignIn: \(error)")
