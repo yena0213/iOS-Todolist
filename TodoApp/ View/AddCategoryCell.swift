@@ -38,8 +38,8 @@ class AddCategoryCell: UICollectionViewCell {
         addSubview(addButton)
         self.addButton.snp.makeConstraints{make in
             make.edges.equalToSuperview()
-            make.width.equalTo(50)
-            make.height.equalTo(50)
+            make.width.equalTo(48)
+            make.height.equalTo(48)
         }
     }
 }

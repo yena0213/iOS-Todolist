@@ -11,13 +11,14 @@ import SnapKit
 import SwiftUI
 
 final class TodoViewCell: UICollectionViewCell {
-    private let circleView: UIButton = {
-        let circle = UIButton(type: .system)
-        circle.setImage(UIImage(systemName: "circle"), for: .normal)
-        circle.layer.borderWidth = 1
-        
-        return circle
+    
+    let circleView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(systemName: "checkmark.circle")
+        return imageView
     }()
+    
     
 
 //    private let checkCircleView: UIView = {

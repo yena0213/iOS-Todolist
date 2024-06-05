@@ -12,7 +12,7 @@ class FetchAPI {
     
     static let shared = FetchAPI()
     
-    private init{}
+  //  private init{}
    
     func fetchAPI<T: Decodable> (_ endpoint: EndPoint) async throws -> T {
         guard let url = endpoint.url else {

@@ -30,7 +30,7 @@ enum EndPoint {
     case signup
     
     var url: URL? {
-        let baseURL = "http://na2ru2.me:515"
+        let baseURL = "http://na2ru2.me:5151"
         switch self{
         case .getTodo(let memberId), .addTodo(let memberId, _):
             return URL(string: "\(baseURL)/todo/\(memberId)")

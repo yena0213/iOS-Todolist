@@ -14,7 +14,7 @@ class CategoryViewCell: UICollectionViewCell {
     let label: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 12)
    //     label.layer.masksToBounds = true
         return label
     }()
@@ -32,14 +32,16 @@ class CategoryViewCell: UICollectionViewCell {
         contentView.addSubview(label)
         contentView.layer.cornerRadius = 10
         contentView.layer.masksToBounds = true
+        contentView.layer.borderWidth = 1
         
         label.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
         
-    func configure(with text: Category) {
-        label.text = text.content
-        label.backgroundColor = UIColor(hexCode: text.color)
+    func configure(with category: Category) {
+        label.text = category.content
+        contentView.layer.backgroundColor = UIColor(hexCode: category.color).cgColor
+        contentView.layer.borderColor = UIColor(hexCode: category.color).cgColor
     }
 }

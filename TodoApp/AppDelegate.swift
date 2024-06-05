@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+//  https://starinu.inu.ac.kr/index.do#AppDelegate.swift
 //  TodoApp
 //
 //  Created by 한현승 on 5/25/24.
@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                  // iOS 13 이상에서는 SceneDelegate에서 설정합니다.
              } else {
                  window = UIWindow(frame: UIScreen.main.bounds)
-                       let todoViewController = TodoViewController()
+                       let todoViewController = MainViewController()
                        window?.rootViewController = UINavigationController(rootViewController: todoViewController)
                        window?.makeKeyAndVisible()
              }

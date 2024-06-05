@@ -48,5 +48,21 @@ extension UIColor {
                       alpha: alpha)
         }
     
+    static let fontColor = UIColor(hexCode: "735B37")
+    static let labelFontColor = UIColor(hexCode: "553910")
+    static let grayBackgroud = UIColor(hexCode: "F5F5F5")
+    static let MainBackground = UIColor(hexCode:"#4260FF")
+    
+    static let lineColor = UIColor(hexCode: "EAEAEA")
+    
+    static let boldPink = UIColor(hexCode: "F9B0CA")
+    static let boldYellow = UIColor(hexCode: "FFE560")
+    static let boldGreen = UIColor(hexCode: "47D2CA")
+    static let boldPurple = UIColor(hexCode: "B6B0F9")
+    static let thinPink = UIColor(hexCode: "FFF5F9")
+    static let thinYellow = UIColor(hexCode: "FFFDEE")
+    static let thinGreen = UIColor(hexCode: "F0FFFE")
+    static let thinPurple = UIColor(hexCode: "735B37")
 }
+
 
