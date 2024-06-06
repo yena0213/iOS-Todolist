@@ -26,11 +26,11 @@ enum EndPoint {
     case updateCategory(categoryId: Int, item: Category)
     case deleteCategory(categoryId: Int)
     case member(Id: Int)
-    case signin
+    case signIn (item: SignIn)
     case signup
     
     var url: URL? {
-        let baseURL = "http://na2ru2.me:515"
+        let baseURL = "http://na2ru2.me:5151"
         switch self{
         case .getTodo(let memberId), .addTodo(let memberId, _):
             return URL(string: "\(baseURL)/todo/\(memberId)")
@@ -52,14 +52,14 @@ enum EndPoint {
             
         case .signup:
             return URL(string: "\(baseURL)/member/sign-up")
-        case .signin:
+        case .signIn:
             return URL(string: "\(baseURL)/member/sign-in")
         }
     }
     
     var method: String {
         switch self {
-        case .addTodo, .addCategory, .signin, .signup :
+        case .addTodo, .addCategory, .signIn, .signup :
             return "POST"
         case .getTodo, .getCategory , .member:
             return "GET"
@@ -80,6 +80,8 @@ enum EndPoint {
             return try? JSONEncoder().encode(category)
         case .updateCategory(_, let category):
             return try? JSONEncoder().encode(category)
+        case .signIn(let item)  :
+            return try? JSONEncoder().encode(item)
         default :
             return nil
         }

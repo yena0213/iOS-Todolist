@@ -12,7 +12,7 @@ class FetchAPI {
     
     static let shared = FetchAPI()
     
-    private init{}
+    private init() {}
    
     func fetchAPI<T: Decodable> (_ endpoint: EndPoint) async throws -> T {
         guard let url = endpoint.url else {
@@ -50,7 +50,6 @@ class FetchAPI {
     func addTodo(memberId: Int, todo: AddTodo) async throws -> AddTodo {
         try await fetchAPI(.addTodo(memberId: memberId, item: todo))
     }
-    
     func getTodo(memberId: Int) async throws -> [Todo] {
         try await fetchAPI(.getTodo(memberId: memberId))
     }
@@ -60,6 +59,7 @@ class FetchAPI {
     func deleteTodo(todoId: Int) async throws -> Todo{
         try await fetchAPI(.deleteTodo(todoId: todoId))
     }
+    
     func addCategory(memberId: Int, category: AddCategory) async throws -> AddCategory {
         try await fetchAPI(.addCategory(memberId: memberId, item: category))
     }
@@ -72,6 +72,8 @@ class FetchAPI {
     func deleteCategory(categoryId: Int) async throws -> [Category] {
         try await fetchAPI(.deleteCategory(categoryId: categoryId))
     }
-    
+    func signIn(data: SignIn) async throws -> LoginResponse {
+        try await fetchAPI(.signIn(item: data))
+    }
     
 }
