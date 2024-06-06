@@ -21,9 +21,9 @@
 		B27BB5412C05D14800329F97 /* Todo_listUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BB5402C05D14800329F97 /* Todo_listUITestsLaunchTests.swift */; };
 		B27BB5512C05D68200329F97 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BB5502C05D68200329F97 /* LoginViewController.swift */; };
 		B27BB5532C05D69100329F97 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BB5522C05D69100329F97 /* SignupViewController.swift */; };
-		B27BB5552C05D75800329F97 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BB5542C05D75800329F97 /* SignupModel.swift */; };
+		B27BB5552C05D75800329F97 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BB5542C05D75800329F97 /* Signup.swift */; };
 		B27BB5582C05D83200329F97 /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BB5572C05D83200329F97 /* TodoData.swift */; };
-		B29D22A02C05DEEA00374E68 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D229F2C05DEEA00374E68 /* LoginModel.swift */; };
+		B29D22A02C05DEEA00374E68 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D229F2C05DEEA00374E68 /* Login.swift */; };
 		B29D22A22C05DF3F00374E68 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D22A12C05DF3F00374E68 /* NetworkResult.swift */; };
 		B29D22A52C05E5CB00374E68 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D22A42C05E5CB00374E68 /* LoginService.swift */; };
 		B29D22A72C05E60500374E68 /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D22A62C05E60500374E68 /* SignupService.swift */; };
@@ -68,9 +68,9 @@
 		B27BB5402C05D14800329F97 /* Todo_listUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_listUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B27BB5502C05D68200329F97 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B27BB5522C05D69100329F97 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		B27BB5542C05D75800329F97 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
+		B27BB5542C05D75800329F97 /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		B27BB5572C05D83200329F97 /* TodoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
-		B29D229F2C05DEEA00374E68 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		B29D229F2C05DEEA00374E68 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		B29D22A12C05DF3F00374E68 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		B29D22A42C05E5CB00374E68 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		B29D22A62C05E60500374E68 /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
@@ -173,8 +173,8 @@
 		B27BB54D2C05D24F00329F97 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B27BB5542C05D75800329F97 /* SignupModel.swift */,
-				B29D229F2C05DEEA00374E68 /* LoginModel.swift */,
+				B27BB5542C05D75800329F97 /* Signup.swift */,
+				B29D229F2C05DEEA00374E68 /* Login.swift */,
 				B27BB5572C05D83200329F97 /* TodoData.swift */,
 				B29D22A12C05DF3F00374E68 /* NetworkResult.swift */,
 			);
@@ -345,10 +345,10 @@
 				B27BB5532C05D69100329F97 /* SignupViewController.swift in Sources */,
 				B29D22A22C05DF3F00374E68 /* NetworkResult.swift in Sources */,
 				B29D22A72C05E60500374E68 /* SignupService.swift in Sources */,
-				B27BB5552C05D75800329F97 /* SignupModel.swift in Sources */,
+				B27BB5552C05D75800329F97 /* Signup.swift in Sources */,
 				B216A9C42C0F1D600010C61D /* endpoint.swift in Sources */,
 				B27BB51E2C05D14700329F97 /* AppDelegate.swift in Sources */,
-				B29D22A02C05DEEA00374E68 /* LoginModel.swift in Sources */,
+				B29D22A02C05DEEA00374E68 /* Login.swift in Sources */,
 				B29D22A52C05E5CB00374E68 /* LoginService.swift in Sources */,
 				B27BB5582C05D83200329F97 /* TodoData.swift in Sources */,
 				B27BB5202C05D14700329F97 /* SceneDelegate.swift in Sources */,
